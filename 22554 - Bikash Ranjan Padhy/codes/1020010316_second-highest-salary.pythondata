@@ -1,0 +1,9 @@
+import pandas as pd
+
+def second_highest_salary(employee: pd.DataFrame) -> pd.DataFrame:
+    employee.drop_duplicates(subset="salary",inplace=True,keep="first")
+    employee.sort_values(by="salary",ascending = False,inplace=True)
+    employee.reset_index(inplace=True,drop=True)
+    new_df = pd.DataFrame()
+    new_df[f"SecondHighestSalary"] = [employee.loc[1]['salary']] if len(employee) >= 2 else [None]
+    return new_df

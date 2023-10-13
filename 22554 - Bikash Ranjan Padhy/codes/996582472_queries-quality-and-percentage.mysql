@@ -1,0 +1,18 @@
+# Write your MySQL query statement below
+# WITH CTE AS (
+#   SELECT query_name, (Q.rating/Q.position)/COUNT(query_name) AS quality 
+#   FROM Query
+#   GROUP BY query_name
+# ) 
+
+
+# SELECT query_name, COUNT(rating)  AS poor_query_percentage
+# FROM CTE 
+# WHERE rating< quality
+# GROUP BY query_name
+
+SELECT 	query_name,
+	ROUND(AVG(rating / position), 2) AS quality,
+	ROUND(AVG(rating < 3) * 100, 2) AS poor_query_percentage 
+FROM Queries
+GROUP BY query_name
