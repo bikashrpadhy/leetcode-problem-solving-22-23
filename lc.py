@@ -231,7 +231,7 @@ if args.get:
     print("No new accepted submissions")
   
   with open(timestamp_file,"w") as ts:
-    print("Wrting latest timestamp to '{}'.".format(timestamp_file))
+    print("Writing latest timestamp to '{}'.".format(timestamp_file))
     ts.write(str(upt_timestamp))
 
 
