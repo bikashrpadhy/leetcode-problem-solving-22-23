@@ -1,3 +1,5 @@
-This repo has some Leetcode problems I have solved
+This repo has some Leetcode problems I have solved.
 
-Along with the solutions, and time and space complexities- in notes.
+Along with the solutions. 
+
+The time and space complexities are written in notes.
